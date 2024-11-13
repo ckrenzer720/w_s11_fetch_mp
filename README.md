@@ -14,7 +14,9 @@
 
 ## ✨ Prototype
 
-[Link to a working prototype.](https://bloominstituteoftechnology.github.io/W_S11_Fetch_Project)
+[Link to a working prototype.](
+
+)
 
 ## ✨ Instructions
 
@@ -35,7 +37,7 @@ In this project you will work on a Dog Shelter application. This app has two scr
 
 #### 👉 TASK 1 - Study the prototype
 
-The general functionality of the app will match the one in [this prototype](https://bloominstituteoftechnology.github.io/W_S11_Fetch_Project).
+The general functionality of the app w®ill match the one in [this prototype](https://bloominstituteoftechnology.github.io/W_S11_Fetch_Project).
 
 You can see the network requests playing out in the Network Tab of Chrome Devtools.
 
@@ -46,14 +48,17 @@ When your app is running it exposes an API on `http://localhost:3003/api/dogs` w
 1. GET `/dogs` **returns all dogs from the server**
 
 2. POST `/dogs` **posts a new dog to the server**
-    - Request body: expects a JSON object with "name" (string), "breed" (string) and "adopted" (boolean)
+
+   - Request body: expects a JSON object with "name" (string), "breed" (string) and "adopted" (boolean)
 
 3. DELETE `/dogs/:id` **removes a dog from the server**
-    - ID parameter: expects an actual dog ID at the end of the URL
+
+   - ID parameter: expects an actual dog ID at the end of the URL
 
 4. PUT `/dogs/:id` **updates the dog by the given ID**
-    - ID parameter: expects an actual dog ID at the end of the URL
-    - Request body: expects a JSON object with at least one update ("name", "breed", "adopted")
+
+   - ID parameter: expects an actual dog ID at the end of the URL
+   - Request body: expects a JSON object with at least one update ("name", "breed", "adopted")
 
 5. GET `/dogs/breeds` **returns the breeds to use in the dropdown of the form**
 
