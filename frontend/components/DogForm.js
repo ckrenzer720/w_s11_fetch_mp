@@ -21,8 +21,33 @@ export default function DogForm({ dog, reset, fetchDogs }) {
     else setValues(initialForm);
   }, [dog]);
 
-  const PUTdog = () => {};
-  const POSTdog = () => {};
+  const PUTdog = () => {
+    fetch(`/api/dogs/${values.id}`, {
+      method: "PUT",
+      body: JSON.stringify(values),
+      headers: new Headers({ "Content-Type": "application/json" }),
+    })
+      .then((res) => {
+        res.json();
+        fetchDogs();
+        reset;
+        navigate("/");
+      })
+      .catch((err) => console.log(err));
+  };
+  const POSTdog = () => {
+    fetch("/api/dogs", {
+      method: "POST",
+      body: JSON.stringify(values),
+      headers: new Headers({ "Content-Type": "application/json" }),
+    })
+      .then((res) => {
+        res.json();
+        fetchDogs();
+        navigate("/");
+      })
+      .catch((err) => console.log(err));
+  };
 
   const onSubmit = (event) => {
     event.preventDefault();
